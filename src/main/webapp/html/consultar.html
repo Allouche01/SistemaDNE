@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sistema DNE</title>
+	</head>
+<center> 
+	<body>
+		<form action="../ServletEstudante?cmd=con" method="post">
+			<table border="1">
+				<tr>
+					<th colspan="2"><h2>Consultar Carteinha</h2></th>
+				</tr>
+				<tr>
+					<td>CPF do Estudante:</td>
+					<td><input id="cpf" type="text" name="txtCpf" size="11" /> </td>
+				</tr>
+				<tr>
+					<th colspan="2"><input type="submit" value="Enviar"></th>
+				</tr>
+		</table>
+	</form>
+</center>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+	<script>
+		 $('#cpf').mask('000.000.000-00', {reverse: true});
+	</script>
+</body>
+</html>

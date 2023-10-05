@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Sistema Acadêmico</title>
+	</head>
+<body>
+	<form action="../ServletEstudante" method="get">
+		</br> </br> </br> </br>
+		<center>
+			<table border="1">
+				<input type="hidden" name="cmd" value="incluir">
+				<tr>
+					<th colspan="2">
+						<h1>Cadastro de Estudante</h1>
+					</th>
+				</tr>
+				<tr>
+					<td>E-mail:</td>
+					<td><input type="email" size="100" name="txtEmail" /></td>
+				</tr>
+				<tr>
+					<td>Nome:</td>
+					<td><input type="text" name="txtNome" size="100" /></td>
+				</tr>
+				<tr>
+					<td>Data de Nascimento:</td>
+					<td><input type="text" size="15" name="txtData" data-mask="00/00/0000" /></td>
+				</tr>
+				<tr>
+					<td>CPF:</td>
+					<td><input id="cpf" type="text" size="15" name="txtCpf"/></td>
+				</tr>
+				<tr>
+					<td>CEP:</td>
+					<td><input id="cep" type="text" size="15" name="txtCep"/></td>
+				</tr>
+				<tr>
+					<td>Número de Casa:</td>
+					<td><input id="numero" type="text" size="15" name="txtNumero"/></td>
+				</tr>
+				<tr>
+					<td>Genero</td>
+					<td><select size="1" name="cmbGenero">
+							<option>Masculino</option>
+							<option>Feminino</option>
+							<option>Outro</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td>Celular:</td>
+					<td><input id="phone" type="text" size="15" name="txtCelular" /></td>
+				</tr>
+				<tr>
+					<td>Escolaridade</td>
+					<td><select size="1" name="cmbEscolaridade">
+							<option>Fundamental</option>
+							<option>Medio</option>
+							<option>Tecnico</option>
+							<option>Superior</option>
+							<option>Pós-graduado</option>
+							<option>Mestrado/Doutorado</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td>Nome do Curso:</td>
+					<td><input id="curso" type="text" size="50" name="txtNomeCurso" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="submit" value="Enviar"></td>
+				</tr>
+			</table>
+	</form>
+	</center>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+	<script>
+		 $('#cpf').mask('000.000.000-00', {reverse: true});
+		 $('#phone').mask('(00)00000-0000');
+		 $('#cep').mask('00000-000');
+		 $('#numero').mask('000000');
+	</script>
+</body>
+</html>
